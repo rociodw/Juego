@@ -55,7 +55,7 @@ usuario.forEach(boton => {
         puntosComputadora=0
         lottie.innerHTML='<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/9ac95d94-b484-4a89-a34d-22ebebfd3b63/RcGuqnJXFB.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>'
         contenedorGanador.style.background='linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(222, 123, 141) 71%)';
-        jugarAgain.style.boxShadow='1px 6px 6px rgb(152, 64, 80)'
+        jugarAgain.style.boxShadow='1px 6px 6px rgb(152, 64, 80);'
         
     }
     
@@ -83,3 +83,11 @@ jugarAgain.addEventListener('click', function(){
     resultadoComputadora.innerHTML=0
     resultadoUsuario.innerHTML= 0
 })
+
+
+const appHeight = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+  window.addEventListener('resize', appHeight)
+  appHeight()
