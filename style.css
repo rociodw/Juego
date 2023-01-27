@@ -6,9 +6,6 @@
 /* rosa: #DE7B8D */
 /* verde: #B6DE7B */
 
-:root {
-    --vh: 100vh;
-  }
 
 body{
     padding:0;
@@ -16,8 +13,6 @@ body{
     user-select: none;
     width:100vw;
     height:100vh;
-    min-height: 100vh;
-    min-height: calc(var(--vh, 1vh) * 100);
 }
 
 /* HEADER */
