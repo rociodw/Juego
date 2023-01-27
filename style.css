@@ -137,6 +137,7 @@ h2{
     width: 100vw;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 2%;
 }
 
 .btn-usuario{
