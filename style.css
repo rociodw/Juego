@@ -5,14 +5,16 @@
 
 /* rosa: #DE7B8D */
 /* verde: #B6DE7B */
-
+html{
+    height: fill-available;
+}
 
 body{
     padding:0;
     margin:0;
     user-select: none;
     width:100vw;
-    height:100vh;
+    height: fill-available;
 }
 
 /* HEADER */
