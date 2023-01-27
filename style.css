@@ -5,16 +5,18 @@
 
 /* rosa: #DE7B8D */
 /* verde: #B6DE7B */
-html{
-    height: fill-available;
-}
-
-body{
-    padding:0;
-    margin:0;
+:root {
+    --vh: 100vh;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     user-select: none;
     width:100vw;
-    height: fill-available;
+    overflow: hidden;
 }
 
 /* HEADER */
