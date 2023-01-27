@@ -40,6 +40,9 @@ h1{
     color: rgba(222, 123, 141);
     text-transform: uppercase;
     background-color: rgba(255, 255, 255 );
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
 }
 
 /* Puntos usuarios */
@@ -245,3 +248,10 @@ h2{
 .igual{animation:iguales .9s both}
 @keyframes iguales{0%{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,.75,1)}40%{transform:scale3d(.75,1.25,1)}50%{transform:scale3d(1.15,.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}100%{transform:scale3d(1,1,1)}}
 
+@supports (-webkit-touch-callout: none) {
+    body {
+      /* The hack for Safari */
+      min-height: -webkit-fill-available;
+    }
+
+}
