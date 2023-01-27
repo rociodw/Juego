@@ -1,0 +1,239 @@
+@font-face {
+    font-family: titulo;
+    src: url(/fonts/PatrickHandSC-Regular.ttf);
+}
+
+/* rosa: #DE7B8D */
+/* verde: #B6DE7B */
+
+body{
+    padding:0;
+    margin:0;
+    user-select: none;
+}
+
+/* HEADER */
+
+header{
+    height: 10vh;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    background-color:rgba(182, 222, 123);
+    
+}
+h1{
+    height: 50%;
+    width: 100%;
+    background-color: transparent;
+    font-family: titulo;
+    letter-spacing: 4px;
+    text-align: center;
+    color: rgba(222, 123, 141);
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255 );
+}
+
+/* Puntos usuarios */
+
+.contenedor-puntos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    margin-left: 1em;
+}
+
+h2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .8em;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.puntos{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3em;
+}
+
+/* ZONA JUEGO COMPUTADORA */
+#zona-computadora{
+    height: 40vh;
+    width:100%;
+    background-color:rgba(182, 222, 123);
+    display: flex;
+    align-items: center;
+}
+
+#contenedor-puntos-computadora{
+    top:10vh;
+}
+
+#contenedor-seleccion-computadora{
+    width:100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#computadora{
+    height: 30vh;
+}
+
+#computadora img{
+    height: 100%;
+}
+
+
+/* ZONA JUGADOR USUARIO */
+#zona-usuario{
+    height: 50vh;
+    width:100%;
+    background-color: rgba(222, 123, 141);
+    display: flex;
+    align-items: center;
+}
+
+#contenedor-puntos-usuario{
+    top: 50vh;
+}
+
+#contenedor-seleccion-usuario{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#seleccion-usuario{
+    height: 30vh;
+}
+
+#seleccion-usuario img{
+    height: 100%;
+}
+
+#contenedor-opciones-usuario{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-usuario{
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: transparent;
+    border:none;
+}
+
+.btn-usuario img{
+    width: 130%;
+}
+
+.btn-usuario:hover{
+    filter:drop-shadow( 1px 10px 10px rgb(152, 64, 80));
+}
+
+.btn-usuario:not(:hover){
+    filter:saturate(0);
+}
+
+/* GANADOR */
+#contenedor-ganador{
+    display: none;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left:50%;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(192, 255, 233, 0.505);
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(250,255,150,1) 71%);
+}
+
+/* #close-ganador{
+    width:2em;
+    height:2em;
+    position: fixed;
+    top:0px;
+    right:0px;
+    background-color: white;
+    font-family: titulo;
+    font-size: 1.5em;
+    border:1px solid rgb(167, 167, 167);
+    color: gray;
+    cursor: pointer;
+    border-radius: 50%;
+    margin:4px;
+}
+
+#close-ganador:hover{
+    color: black;
+} */
+
+#informacion-ganador{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#ganador{
+    font-size: 2em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: .5em 1em .5em 1em;;
+    text-align: center;
+    color: rgb(204, 103, 121);
+    background-color: white;
+    border: 4px solid rgb(241, 251, 159);
+}
+
+#jugar-again{
+    font-family:titulo;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    padding: 1.5em;
+    border-radius:20%;
+    border:none;
+    background: rgb(222,123,141);
+    background: linear-gradient(9deg, rgba(222,123,141,1) 38%, rgba(182,222,123,1) 85%);
+    cursor:pointer;
+    box-shadow: 1px 6px 6px rgb(206, 213, 3);
+
+}
+
+#jugar-again:hover{
+    transition-duration: 1s;
+
+    background: rgb(182,222,123);
+    background: linear-gradient(9deg, rgba(182,222,123,1) 38%, rgba(222,123,141,1) 85%);
+    box-shadow: none;
+}
+
+#contenedor-animacion{
+    width: 70vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* ANIMACIONES */
+.igual{animation:iguales .9s both}
+@keyframes iguales{0%{transform:scale3d(1,1,1)}30%{transform:scale3d(1.25,.75,1)}40%{transform:scale3d(.75,1.25,1)}50%{transform:scale3d(1.15,.85,1)}65%{transform:scale3d(.95,1.05,1)}75%{transform:scale3d(1.05,.95,1)}100%{transform:scale3d(1,1,1)}}
+
