@@ -6,20 +6,27 @@
 /* rosa: #DE7B8D */
 /* verde: #B6DE7B */
 
-  
-  body {
+html{
+    height: 100%;
+}
+
+body {
     padding: 0;
     margin: 0;
     user-select: none;
     width:100%;
     height: 100%;
     overflow: hidden;
+    background-color: rgb(121, 93, 93);
 }
 
 /* HEADER */
 
+
+
 header{
     height: 10%;
+    width: 100%;
     margin-top: 0;
     display: flex;
     align-items: center;
@@ -39,6 +46,11 @@ h1{
 }
 
 /* Puntos usuarios */
+
+main{
+    height: 90%;
+    width: 100%;
+}
 
 .contenedor-puntos{
     display: flex;
@@ -62,7 +74,7 @@ h2{
 
 /* ZONA JUEGO COMPUTADORA */
 #zona-computadora{
-    height: 40%;
+    height: 50%;
     width:100%;
     background-color:rgba(182, 222, 123);
     display: flex;
@@ -74,7 +86,7 @@ h2{
 }
 
 #contenedor-seleccion-computadora{
-    width:100%;
+    width:100vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -83,7 +95,7 @@ h2{
 }
 
 #computadora{
-    height: 30%;
+    height: 30vh;
 }
 
 #computadora img{
@@ -101,11 +113,11 @@ h2{
 }
 
 #contenedor-puntos-usuario{
-    top: 50%;
+    top: 50vh;
 }
 
 #contenedor-seleccion-usuario{
-    width: 100%;
+    width: 100vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -115,7 +127,7 @@ h2{
 }
 
 #seleccion-usuario{
-    height: 30%;
+    height: 30vh;
 }
 
 #seleccion-usuario img{
@@ -123,14 +135,14 @@ h2{
 }
 
 #contenedor-opciones-usuario{
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
 }
 
 .btn-usuario{
-    height: 10%;
-    width: 10%;
+    height: 10vh;
+    width: 10vh;
     border-radius: 50%;
     padding: 0;
     margin: 0;
@@ -231,7 +243,7 @@ h2{
 }
 
 #contenedor-animacion{
-    width: 70%;
+    width: 70vw;
     height: auto;
     display: flex;
     justify-content: center;

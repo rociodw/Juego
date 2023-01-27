@@ -1,72 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-
-    
-</head>
-<body>
-
-    <header>
-        <h1>Piedra, papel o tijera</h1>
-    </header>
-    <main>
-        <!-- Jugada computadora -->
-        <div id="zona-computadora">
-            <!-- Puntos computadora -->
-            <div class="contenedor-puntos" id="contenedor-puntos-computadora">
-                <!-- Puntos usuario -->
-                <h2>Puntos</h2>
-                <p class="puntos" id="puntos-computadora">0</p>
-            </div>
-            <div id="contenedor-seleccion-computadora">
-                <div id="computadora"></div>
-            </div>
-        </div>
-
-
-        <div id="zona-usuario">
-            <div class="contenedor-puntos" id="contenedor-puntos-usuario">
-                <!-- Puntos usuario -->
-                <h2>Puntos</h2>
-                <p class="puntos" id="puntos-usuario">0</p>
-            </div>
-            <div id="contenedor-seleccion-usuario">
-                <!-- Jugada usuario -->
-                <div id="seleccion-usuario"></div>
-                <!-- Opciones del usuario -->
-                <div id="contenedor-opciones-usuario">
-                    <button class="btn-usuario" id="piedra" value="piedra"><img src="/img/green-piedra.png" alt=""></button>
-                    <button class="btn-usuario" id="papel" value="papel"><img src="/img/green-papel.png" alt=""></button>
-                    <button class="btn-usuario" id="tijera" value="tijera"><img src="/img/green-tijera.png" alt=""></button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Piedra, papel o tijera</h1>
+        </header>
+        <main>
+            <!-- Jugada computadora -->
+            <div id="zona-computadora">
+                <!-- Puntos computadora -->
+                <div
+                    class="contenedor-puntos"
+                    id="contenedor-puntos-computadora">
+                    <!-- Puntos usuario -->
+                    <h2>Puntos</h2>
+                    <p class="puntos" id="puntos-computadora">0</p>
+                </div>
+                <div id="contenedor-seleccion-computadora">
+                    <div id="computadora"></div>
                 </div>
             </div>
 
-        </div>
-
-        <div id="contenedor-ganador">
-            <!-- <button id="close-ganador">x</button> -->
-            <!-- Ganador: -->
-            <div id="informacion-ganador">
-                <p id="ganador"></p>
-                <button id="jugar-again">Jugar</button>
-                <div id="contenedor-animacion">
-                    <div id="contenedor-lottie">
+            <div id="zona-usuario">
+                <div class="contenedor-puntos" id="contenedor-puntos-usuario">
+                    <!-- Puntos usuario -->
+                    <h2>Puntos</h2>
+                    <p class="puntos" id="puntos-usuario">0</p>
+                </div>
+                <div id="contenedor-seleccion-usuario">
+                    <!-- Jugada usuario -->
+                    <div id="seleccion-usuario"></div>
+                    <!-- Opciones del usuario -->
+                    <div id="contenedor-opciones-usuario">
+                        <button class="btn-usuario" id="piedra" value="piedra">
+                            <img src="/img/green-piedra.png" alt="" />
+                        </button>
+                        <button class="btn-usuario" id="papel" value="papel">
+                            <img src="/img/green-papel.png" alt="" />
+                        </button>
+                        <button class="btn-usuario" id="tijera" value="tijera">
+                            <img src="/img/green-tijera.png" alt="" />
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
 
+            <div id="contenedor-ganador">
+                <!-- <button id="close-ganador">x</button> -->
+                <!-- Ganador: -->
+                <div id="informacion-ganador">
+                    <p id="ganador"></p>
+                    <button id="jugar-again">Jugar</button>
+                    <div id="contenedor-animacion">
+                        <div id="contenedor-lottie"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-
-    </main>
- 
-
-<script src="/script.js"></script>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
-</body>
+        <script src="/script.js"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    </body>
 </html>

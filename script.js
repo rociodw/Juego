@@ -78,3 +78,9 @@ usuario.forEach(boton => {
 //     resultadoUsuario.innerHTML= 0
 // })
 
+jugarAgain.addEventListener('click', function(){
+    contenedorGanador.style.display='none'
+    resultadoComputadora.innerHTML=0
+    resultadoUsuario.innerHTML= 0
+})
+
