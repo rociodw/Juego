@@ -72,6 +72,9 @@ h1{
     background-color:rgb(210, 236, 169);
     color:rgb(71, 95, 34);
     border:1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #info:hover{
