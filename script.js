@@ -60,7 +60,7 @@ usuario.forEach(boton => {
             ganador.style.border='4px solid rgb(152, 64, 80)'
             ganador.style.color='rgb(152, 64, 80)'
             contenedorGanador.style.display='block'
-            puntosComputadora=0
+            puntosComputadora=1
             lottie.innerHTML='<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/9ac95d94-b484-4a89-a34d-22ebebfd3b63/RcGuqnJXFB.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>'
             contenedorGanador.style.background='linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(222, 123, 141) 71%)';
             jugarAgain.style.boxShadow='1px 6px 6px rgb(152, 64, 80)'
@@ -72,7 +72,7 @@ usuario.forEach(boton => {
             ganador.style.border='4px solid rgb(206, 213, 3)'
             ganador.style.color='rgb(206, 213, 3)'
             contenedorGanador.style.display='block'
-            puntosUsuario=0
+            puntosUsuario=1
             lottie.innerHTML='<lottie-player src="https://lottie.host/1e47e80b-1eb5-4e24-a574-f6a1dce34a9c/MjtKzfHdNJ.json" background="transparent" speed="1" style="width: 70vw; height: 300px;" loop autoplay></lottie-player>'
             contenedorGanador.style.background='linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(242, 245, 136) 71%)';
             jugarAgain.style.boxShadow='1px 6px 6px rgb(206, 213, 3)'
