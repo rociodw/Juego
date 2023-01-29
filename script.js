@@ -55,7 +55,7 @@ usuario.forEach(boton => {
     }
 
     function ganadores() {
-        if(puntosComputadora===6){
+        if(puntosComputadora===6 ||puntosComputadora>6 ){
             ganador.innerHTML='Perdiste esta vez, ¿quieres intentarlo de nuevo?'
             ganador.style.border='4px solid rgb(152, 64, 80)'
             ganador.style.color='rgb(152, 64, 80)'
@@ -68,7 +68,7 @@ usuario.forEach(boton => {
             
         }
         
-        if(puntosUsuario===6){
+        if(puntosUsuario===6||puntosUsuario>6){
             ganador.innerHTML='¡Ganaste! ¿Jugamos otra ronda?'
             ganador.style.border='4px solid rgb(206, 213, 3)'
             ganador.style.color='rgb(206, 213, 3)'
