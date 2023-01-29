@@ -92,7 +92,8 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
+    top:calc(25%/2);
+    height:50%;
     margin-left: 1em;
     color: white;
 }
@@ -118,7 +119,7 @@ h2{
 }
 
 #contenedor-puntos-computadora{
-    top:15vh;
+    top:15%;
 }
 
 #contenedor-seleccion-computadora{
@@ -149,7 +150,7 @@ h2{
 }
 
 #contenedor-puntos-usuario{
-    top: 60vh;
+    top: 60%;
 }
 
 #contenedor-seleccion-usuario{
@@ -374,5 +375,21 @@ h3{
     #contenedor-reglas p{
         font-size:1.2em ;
     }
+
+    .contenedor-puntos{
+        margin-left: .5em;
+    }
+
+    h2{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: .5em;
+        text-transform: uppercase;
+    }
+    
+    .puntos{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2.5em;
+    }
+    
 }
 
