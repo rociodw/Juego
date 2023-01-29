@@ -1,6 +1,17 @@
 @font-face {
-    font-family: titulo;
+    font-family: texto;
     src: url(/fonts/PatrickHandSC-Regular.ttf);
+}
+
+@font-face {
+    font-family: rock;
+    src: url(/fonts/gomarice_rocks.ttf);
+}
+
+
+:root{
+    --verde:rgb(182, 222, 123);
+    --rojo:rgb(222,123,141);
 }
 
 /* rosa: #DE7B8D */
@@ -25,23 +36,48 @@ body {
 
 header{
     height: 10%;
-    width: 100%;
+    width: calc(100% -10px);
     margin-top: 0;
     display: flex;
     align-items: center;
-    background-color:rgba(182, 222, 123);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: var(--verde);
     
 }
 h1{
-    height: 50%;
+    height: 100%;
     width: 100%;
     background-color: transparent;
-    font-family: titulo;
-    letter-spacing: 4px;
+    font-family: rock, titulo, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
     text-align: center;
-    color: rgba(222, 123, 141);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-transform: uppercase;
-    background-color: rgba(255, 255, 255 );
+    text-shadow: 1px 1px 2px rgb(5, 65, 4);
+}
+
+#info{
+    height: 2em;
+    width: 2em;
+    position: fixed;
+    top:calc(10%-2em);
+    right:5%;
+    border-radius: 50%;
+    background-color:rgb(210, 236, 169);
+    color:rgb(71, 95, 34);
+    border:1px solid white;
+}
+
+#info:hover{
+    cursor: pointer;
+    border: 1px solid rgb(244, 255, 95);
+    color: white;
+    background-color: rgb(154, 178, 117);
 }
 
 /* Puntos usuarios */
@@ -57,13 +93,13 @@ main{
     align-items: center;
     position: fixed;
     margin-left: 1em;
+    color: white;
 }
 
 h2{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: .8em;
     text-transform: uppercase;
-    text-decoration: underline;
 }
 
 .puntos{
@@ -81,7 +117,7 @@ h2{
 }
 
 #contenedor-puntos-computadora{
-    top:10vh;
+    top:15vh;
 }
 
 #contenedor-seleccion-computadora{
@@ -112,7 +148,7 @@ h2{
 }
 
 #contenedor-puntos-usuario{
-    top: 50vh;
+    top: 60vh;
 }
 
 #contenedor-seleccion-usuario{
@@ -219,7 +255,7 @@ h2{
 }
 
 #jugar-again{
-    font-family:titulo;
+    font-family:texto;
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -228,15 +264,14 @@ h2{
     border-radius:20%;
     border:none;
     background: rgb(222,123,141);
-    background: linear-gradient(9deg, rgba(222,123,141,1) 38%, rgba(182,222,123,1) 85%);
+    background: linear-gradient(9deg, rgba(222,123,141,1) 38%, rgb(210, 236, 169) 85%);
     cursor:pointer;
-    box-shadow: 1px 6px 6px rgb(206, 213, 3);
+    box-shadow: 1px 6px 6px rgb(238, 240, 154);
 
 }
 
 #jugar-again:hover{
     transition-duration: 1s;
-
     background: rgb(182,222,123);
     background: linear-gradient(9deg, rgba(182,222,123,1) 38%, rgba(222,123,141,1) 85%);
     box-shadow: none;
@@ -247,6 +282,85 @@ h2{
     height: auto;
     display: flex;
     justify-content: center;
+}
+
+/* CONTENEDOR-REGLAS */
+
+#contenedor-reglas{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left:50%;
+    width:100%;
+    height:100%;
+    background-color:rgba(250,255,150,1);
+    display: none;
+}
+
+h3{
+    font-family: texto;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+
+#contenedor-reglas section{
+    width:90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-top: calc(10%/2);
+}
+
+#contenedor-reglas p{
+    font-family: texto;
+    font-size: 1.5em;
+
+}
+#contenedor-jugadas{
+    width: 50%;
+}
+
+.jugadas{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.jugadas img{
+    width:4em;
+    height: 4em;
+}
+
+.mas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+#reglas-jugar{
+    font-family:texto;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    padding: 1em;
+    border-radius:20%;
+    border:none;
+    background: rgb(222,123,141);
+    background: linear-gradient(0deg, var(--verde) , var(--rojo));
+    cursor:pointer;
+    box-shadow: 1px 6px 6px rgb(238, 240, 154);
+}
+
+#reglas-jugar:hover{
+    transition-duration: 1s;
+    background: rgb(182,222,123);
+    background: linear-gradient(0deg, var(--rojo) , var(--verde));
+    box-shadow: none;
 }
 
 /* ANIMACIONES */

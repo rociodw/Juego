@@ -9,7 +9,8 @@
     </head>
     <body>
         <header>
-            <h1>Piedra, papel o tijera</h1>
+            <h1>Piedra, papel, tijera</h1>
+            <button id="info">i</button>
         </header>
         <main>
             <!-- Jugada computadora -->
@@ -61,6 +62,35 @@
                         <div id="contenedor-lottie"></div>
                     </div>
                 </div>
+            </div>
+
+            <div id="contenedor-reglas">
+                <section>
+                    <h3>REGLAS DEL JUEGO</h3>
+                    <p>Selecciona una de las opciones situadas en el inferior de la pantalla (piedra, papel o tijera). Para ganar un punto, la combinación de tu elección y tu rival deberá ser la siguiente: </p>
+                    <p>(Los símbolos en verde corresponden a tu elección)</p>
+                    <div id="contenedor-jugadas">
+                        <div class="jugadas"> 
+                            <img src="/img/green-piedra.png" alt="">
+                            <div class="mas"><span>+</span></div>
+                            <img src="/img/red-tijera.png" alt="">
+                        </div>
+                        <div class="jugadas"> 
+                            <img src="/img/green-papel.png" alt="">
+                            <div class="mas"><span>+</span></div>
+                            <img src="/img/red-piedra.png" alt="">
+                        </div>
+                        <div class="jugadas"> 
+                            <img src="/img/green-tijera.png" alt="">
+                            <div class="mas"><span>+</span></div>
+                            <img src="/img/red-papel.png" alt="">
+                        </div>
+                    </div>
+                    <p>Si ambos símbolos son iguales la jugada resultará nula.</p>
+                    <p>Gana el primer jugador que alcance los 5 puntos</p>
+                    <button id="reglas-jugar">Jugar</button>
+                </section>
+
             </div>
         </main>
 

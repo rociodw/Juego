@@ -12,6 +12,9 @@ var closeGanador=document.getElementById('close-ganador')
 var ganador=document.getElementById('ganador')
 var jugarAgain=document.getElementById('jugar-again')
 var lottie=document.getElementById('contenedor-lottie')
+var btnReglas=document.getElementById('reglas-jugar')
+var contenedorReglas=document.getElementById('contenedor-reglas')
+var info=document.getElementById('info')
 
 // document.oncontextmenu = function(){return false}
 
@@ -47,25 +50,41 @@ usuario.forEach(boton => {
             break;
     }
 
+    function retrasoGanadores(){
+        setTimeout(ganadores, 2000)
+    }
 
-    if(puntosComputadora===6){
-        ganador.innerHTML='Perdiste esta ronda, ¿quieres jugar otra vez?'
-        ganador.style.border='4px solid rgb(152, 64, 80)'
-        contenedorGanador.style.display='block'
-        puntosComputadora=0
-        lottie.innerHTML='<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/9ac95d94-b484-4a89-a34d-22ebebfd3b63/RcGuqnJXFB.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>'
-        contenedorGanador.style.background='linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(222, 123, 141) 71%)';
-        jugarAgain.style.boxShadow='1px 6px 6px rgb(152, 64, 80);'
+    function ganadores() {
+        if(puntosComputadora===6){
+            ganador.innerHTML='Perdiste esta vez, ¿quieres intentarlo de nuevo?'
+            ganador.style.border='4px solid rgb(152, 64, 80)'
+            ganador.style.color='rgb(152, 64, 80)'
+            contenedorGanador.style.display='block'
+            puntosComputadora=0
+            lottie.innerHTML='<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/9ac95d94-b484-4a89-a34d-22ebebfd3b63/RcGuqnJXFB.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>'
+            contenedorGanador.style.background='linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(222, 123, 141) 71%)';
+            jugarAgain.style.boxShadow='1px 6px 6px rgb(152, 64, 80)'
+            
+        }
         
+        if(puntosUsuario===6){
+            ganador.innerHTML='¡Ganaste! ¿Jugamos otra ronda?'
+            ganador.style.border='4px solid rgb(206, 213, 3)'
+            ganador.style.color='rgb(206, 213, 3)'
+            contenedorGanador.style.display='block'
+            puntosUsuario=0
+            lottie.innerHTML='<lottie-player src="https://lottie.host/1e47e80b-1eb5-4e24-a574-f6a1dce34a9c/MjtKzfHdNJ.json" background="transparent" speed="1" style="width: 70vw; height: 300px;" loop autoplay></lottie-player>'
+            contenedorGanador.style.background='linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(242, 245, 136) 71%)';
+            jugarAgain.style.boxShadow='1px 6px 6px rgb(206, 213, 3)'
+        }
     }
-    
-    if(puntosUsuario===6){
-        ganador.innerHTML='¡Ganaste! ¿quieres jugar otra vez?'
-        contenedorGanador.style.display='block'
-        puntosUsuario=0
-        lottie.innerHTML='<lottie-player src="https://lottie.host/1e47e80b-1eb5-4e24-a574-f6a1dce34a9c/MjtKzfHdNJ.json" background="transparent" speed="1" style="width: 70vw; height: 300px;" loop autoplay></lottie-player>'
-        
-    }
+
+    retrasoGanadores()
+
+
+
+
+ 
     
 
 })
@@ -83,4 +102,15 @@ jugarAgain.addEventListener('click', function(){
     resultadoComputadora.innerHTML=0
     resultadoUsuario.innerHTML= 0
 })
+
+info.addEventListener('click', function(){
+    contenedorReglas.style.display='block'
+})
+
+btnReglas.addEventListener('click', function(){
+    contenedorReglas.style.display='none'
+})
+
+
+
 
